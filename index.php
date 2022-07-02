@@ -18,5 +18,6 @@
 		</label>
 		<input type="submit">
 	</form>
+	<a href="teste.php>Link</a>
 </body>
 </html>
