@@ -7,6 +7,8 @@ $destinatario = "carol.nrg@gmail.com";
 $assunto = "Contato do Site";
 $header = "From: $email";
 
-$mail = mail($destinatario, $assunto, $header)
+$mail = mail($destinatario, $assunto, $mensagem, $header);
+
+var_dump($mail);
 
 ?>
