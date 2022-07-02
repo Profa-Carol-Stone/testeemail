@@ -3,12 +3,16 @@ $nome = $_POST["nome"];
 $email = $_POST["email"];
 $mensagem = $_POST["mensagem"];
 
-$destinatario = "carol.nrg@gmail.com";
-$assunto = "Contato do Site";
-$header = "From: $email";
+$to      = 'carol.nrg@gmail.com';
+$subject = 'Contato do Site';
+$message = $mensagem;
+$headers = array(
+    'From' => $email,
+    'Reply-To' => 'carol.nrg@gmail.com',
+    'X-Mailer' => 'PHP/' . phpversion()
+);
 
-$mail = mail($destinatario, $assunto, $mensagem, $header);
+$mail = mail($to, $subject, $message, $headers);
 
 var_dump($mail);
-
 ?>
